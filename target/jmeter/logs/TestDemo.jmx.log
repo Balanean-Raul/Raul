@@ -1,0 +1,66 @@
+2022-12-13 15:25:03,578 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2022-12-13 15:25:03,593 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2022-12-13 15:25:03,595 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2022-12-13 15:25:03,597 INFO o.a.j.JMeter: Setting System property: sun.net.http.allowRestrictedHeaders=true
+2022-12-13 15:25:03,601 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2022-12-13 15:25:03,601 INFO o.a.j.JMeter: Version 5.0 r1840935
+2022-12-13 15:25:03,601 INFO o.a.j.JMeter: java.version=1.8.0_351
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: os.name=Windows 11
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: os.arch=amd64
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: os.version=10.0
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: file.encoding=Cp1252
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: Max memory     =514850816
+2022-12-13 15:25:03,602 INFO o.a.j.JMeter: Available Processors =8
+2022-12-13 15:25:03,607 INFO o.a.j.JMeter: Default Locale=English (United States)
+2022-12-13 15:25:03,607 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2022-12-13 15:25:03,607 INFO o.a.j.JMeter: JMeterHome=C:\Users\raul.balanean\IdeaProjects\test\target\jmeter
+2022-12-13 15:25:03,607 INFO o.a.j.JMeter: user.dir  =C:\Users\raul.balanean\IdeaProjects\test\target\jmeter\bin
+2022-12-13 15:25:03,608 INFO o.a.j.JMeter: PWD       =C:\Users\raul.balanean\IdeaProjects\test\target\jmeter\bin
+2022-12-13 15:25:03,610 INFO o.a.j.JMeter: IP: 10.102.113.215 Name: CPX-2GY06CY27RK FullName: CPX-2GY06CY27RK.dir.svc.accenture.com
+2022-12-13 15:25:03,614 INFO o.a.j.s.FileServer: Default base='C:\Users\raul.balanean\IdeaProjects\test\target\jmeter\bin'
+2022-12-13 15:25:03,619 INFO o.a.j.s.FileServer: Set new base='C:\Users\raul.balanean\IdeaProjects\test\target\jmeter\testFiles'
+2022-12-13 15:25:03,765 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-12-13 15:25:03,783 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-12-13 15:25:03,788 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-12-13 15:25:03,793 INFO o.a.j.s.SaveService: Loading file: C:\Users\raul.balanean\IdeaProjects\test\target\jmeter\testFiles\TestDemo.jmx
+2022-12-13 15:25:03,840 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2022-12-13 15:25:03,841 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2022-12-13 15:25:03,853 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-13 15:25:03,853 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-13 15:25:03,853 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-13 15:25:03,853 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-13 15:25:03,853 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-12-13 15:25:03,853 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-12-13 15:25:03,886 INFO o.a.j.JMeter: Creating summariser <summary>
+2022-12-13 15:25:03,891 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2022-12-13 15:25:03,891 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2022-12-13 15:25:03,892 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2022-12-13 15:25:03,899 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2022-12-13 15:25:03,899 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2022-12-13 15:25:04,280 INFO o.a.j.JMeter: Running test (1670937904280)
+2022-12-13 15:25:04,340 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2022-12-13 15:25:04,341 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2022-12-13 15:25:04,341 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2022-12-13 15:25:04,341 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2022-12-13 15:25:04,347 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2022-12-13 15:25:04,347 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2022-12-13 15:25:04,418 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2022-12-13 15:25:04,421 INFO o.a.j.s.FileServer: Stored: TestData.csv
+2022-12-13 15:25:04,440 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = CPX-2GY06CY27RK
+2022-12-13 15:25:04,446 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2022-12-13 15:25:04,447 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-12-13 15:25:04,447 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-12-13 15:25:04,447 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-12-13 15:25:04,447 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-12-13 15:25:04,571 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2022-12-13 15:25:04,576 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2022-12-13 15:25:04,576 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2022-12-13 15:25:05,059 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2022-12-13 15:25:05,061 INFO o.a.j.u.SSLManager: KeyStore created OK
+2022-12-13 15:25:05,062 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2022-12-13 15:25:09,542 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2022-12-13 15:25:09,542 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2022-12-13 15:25:09,543 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2022-12-13 15:25:09,543 INFO o.a.j.s.FileServer: Close: TestData.csv
+2022-12-13 15:25:09,545 INFO o.a.j.r.Summariser: summary =      8 in 00:00:05 =    1.5/s Avg:   624 Min:     0 Max:  1468 Err:     2 (25.00%)

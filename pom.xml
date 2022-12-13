@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>trello_api_group</groupId>
+<artifactId>trello_api_artifact</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>jar</packaging>
+<name>maven-jmeter-demo</name>
+<url>http://maven.apache.org</url>
+<properties>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+<maven.jar.plugin.version>3.0.0</maven.jar.plugin.version>
+<maven.compiler.source>1.8</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
+<currentDate>${maven.build.timestamp}</currentDate>
+</properties>
+<profiles>
+<profile>
+    <id>load-test</id>
+    <activation>
+        <property>
+            <name>pt</name>
+            <value>load</value>
+        </property>
+    </activation>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/target</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>2.9.0</version>
+                <executions>
+                    <execution>
+                        <id>jmeter-tests</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <testFilesIncluded>
+                        <jMeterTestFile>${jmeterTest}.jmx</jMeterTestFile>
+                    </testFilesIncluded>
+                    <jmeterVersion>5.0</jmeterVersion>
+                    <resultsFileFormat>csv</resultsFileFormat>
+                    <propertiesUser>
+                        <jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
+                        <jmeter.save.saveservice.print_field_names>true </jmeter.save.saveservice.print_field_names>
+                        <jmeter.save.saveservice.successful>true</jmeter.save.saveservice.successful>
+                        <jmeter.save.saveservice.label>true</jmeter.save.saveservice.label>
+                        <jmeter.save.saveservice.time>true</jmeter.save.saveservice.time>
+                        <jmeter.save.saveservice.save.saveservice.bytes>true </jmeter.save.saveservice.save.saveservice.bytes>
+                        <jmeter.save.saveservice.save.saveservice.sent_bytes>true </jmeter.save.saveservice.save.saveservice.sent_bytes>
+                        <jmeter.save.saveservice.save.saveservice.label>true </jmeter.save.saveservice.save.saveservice.label>
+                        <jmeter.save.saveservice.save.saveservice.latency>true </jmeter.save.saveservice.save.saveservice.latency>
+                        <jmeter.save.saveservice.save.saveservice.response_code>true </jmeter.save.saveservice.save.saveservice.response_code>
+                        <jmeter.save.saveservice.save.saveservice.response_message>true </jmeter.save.saveservice.save.saveservice.response_message>
+                        <jmeter.save.saveservice.save.saveservice.successful>true </jmeter.save.saveservice.save.saveservice.successful>
+                        <jmeter.save.saveservice.save.saveservice.thread_counts>true </jmeter.save.saveservice.save.saveservice.thread_counts>
+                        <jmeter.save.saveservice.save.saveservice.thread_name>true </jmeter.save.saveservice.save.saveservice.thread_name>
+                        <jmeter.save.saveservice.save.saveservice.connect_time>true </jmeter.save.saveservice.save.saveservice.connect_time>
+                        <jmeter.save.saveservice.save.saveservice.timestamp_format>yyyy/MM/dd HH:mm:ss </jmeter.save.saveservice.save.saveservice.timestamp_format>
+                        <Threadcount>1</Threadcount>
+                        <Loopcount>1</Loopcount>
+                        <Rampup>1</Rampup>
+                    </propertiesUser>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.17</version>
+                        <type>jar</type>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-extras-libs</artifactId>
+                <version>1.4.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-standard</artifactId>
+                <version>1.4.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-graphs-additional</artifactId>
+                <version>2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-graphs-basic</artifactId>
+                <version>2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-graphs-ggl</artifactId>
+                <version>2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>cmdrunner</artifactId>
+                <version>2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-cmn-jmeter</artifactId>
+                <version>0.5</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-perfmon</artifactId>
+                <version>2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>perfmon</artifactId>
+                <version>2.2.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-core</artifactId>
+                        <version>2.8.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                        <version>1.2</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>de.codecentric</groupId>
+                <artifactId>jmeter-graph-maven-plugin</artifactId>
+                <version>0.1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>kg.apc</groupId>
+                <artifactId>jmeter-plugins-cmd</artifactId>
+                <version>2.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>generate-report-dashboard</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>java</executable>
+                            <arguments>
+                                <argument>-classpath</argument>
+                                <argument>target/jmeter/bin/ApacheJMeter-5.0.jar</argument>
+                                <argument>org.apache.jmeter.NewDriver</argument>
+                                <argument>-g</argument>
+                                <argument>target/jmeter/results/${currentDate}-${jmeterTest}.csv </argument>
+                                <argument>-o</argument>
+                                <argument>target/jmeter/results/APDEX-${jmeterTest}-${currentDate}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</profile>
+</profiles>
+        </project>
